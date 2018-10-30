@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 RUN apt-get update
 RUN apt-get install -y apt-utils curl apache2 apache-utils nano python3
@@ -12,5 +12,6 @@ ADD ./app
 
 EXPOSE 80
 EXPOSE 8080
+EXPOSE 21
 CMD ["apache2ctl","-D","FOREGROUND"] 
 CMD ["hug","-f","status.py"]
