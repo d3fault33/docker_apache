@@ -1,5 +1,5 @@
 #/bin/bash
-cd ~/container
+#cd ~/container
 #building container py_apache with contents from working directory
 docker build -t py_apache .
 #running container in background exposing ports 80 and 4000
